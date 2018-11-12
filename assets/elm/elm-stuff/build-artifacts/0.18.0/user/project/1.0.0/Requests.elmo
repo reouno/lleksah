@@ -1,0 +1,13 @@
+var _user$project$Requests$submitCredentialsRequest = function (user) {
+	return _elm_lang$http$Http$request(
+		{
+			method: 'POST',
+			headers: {ctor: '[]'},
+			url: _user$project$Route$authUrl,
+			body: _elm_lang$http$Http$jsonBody(
+				_user$project$Json$credentialEncoder(user)),
+			expect: _elm_lang$http$Http$expectJson(_user$project$Json$tokenStringDecoder),
+			timeout: _elm_lang$core$Maybe$Nothing,
+			withCredentials: false
+		});
+};

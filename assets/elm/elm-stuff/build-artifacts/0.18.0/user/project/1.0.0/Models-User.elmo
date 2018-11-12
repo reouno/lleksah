@@ -1,0 +1,5 @@
+var _user$project$Models_User$emptyUser = {name: '', email: '', password: '', is_premium: false};
+var _user$project$Models_User$User = F4(
+	function (a, b, c, d) {
+		return {name: a, email: b, password: c, is_premium: d};
+	});

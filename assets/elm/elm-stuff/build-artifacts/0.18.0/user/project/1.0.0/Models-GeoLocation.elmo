@@ -1,0 +1,7 @@
+var _user$project$Models_Geolocation$Geolocation = F3(
+	function (a, b, c) {
+		return {latitude: a, longitude: b, error: c};
+	});
+var _user$project$Models_Geolocation$sampleGeo1 = A3(_user$project$Models_Geolocation$Geolocation, 43.068661, 141.350755, '');
+var _user$project$Models_Geolocation$sampleGeo2 = A3(_user$project$Models_Geolocation$Geolocation, 35.658581, 139.745433, '');
+var _user$project$Models_Geolocation$sampleGeo3 = A3(_user$project$Models_Geolocation$Geolocation, 48.85837, 2.294481, '');

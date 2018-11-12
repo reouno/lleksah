@@ -1,0 +1,33 @@
+var _user$project$Json$tokenStringDecoder = A2(_elm_lang$core$Json_Decode$field, 'token', _elm_lang$core$Json_Decode$string);
+var _user$project$Json$credentialContentEncoder = function (user) {
+	return _elm_lang$core$Json_Encode$object(
+		{
+			ctor: '::',
+			_0: {
+				ctor: '_Tuple2',
+				_0: 'email',
+				_1: _elm_lang$core$Json_Encode$string(user.email)
+			},
+			_1: {
+				ctor: '::',
+				_0: {
+					ctor: '_Tuple2',
+					_0: 'password',
+					_1: _elm_lang$core$Json_Encode$string(user.password)
+				},
+				_1: {ctor: '[]'}
+			}
+		});
+};
+var _user$project$Json$credentialEncoder = function (user) {
+	return _elm_lang$core$Json_Encode$object(
+		{
+			ctor: '::',
+			_0: {
+				ctor: '_Tuple2',
+				_0: 'session',
+				_1: _user$project$Json$credentialContentEncoder(user)
+			},
+			_1: {ctor: '[]'}
+		});
+};

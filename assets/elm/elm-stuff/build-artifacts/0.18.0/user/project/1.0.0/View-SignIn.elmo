@@ -1,0 +1,159 @@
+var _user$project$View_SignIn$signInButton = function (model) {
+	return A5(
+		_debois$elm_mdl$Material_Button$render,
+		_user$project$Msgs$Mdl,
+		{
+			ctor: '::',
+			_0: 9,
+			_1: {
+				ctor: '::',
+				_0: 0,
+				_1: {
+					ctor: '::',
+					_0: 0,
+					_1: {
+						ctor: '::',
+						_0: 1,
+						_1: {ctor: '[]'}
+					}
+				}
+			}
+		},
+		model.mdl,
+		{
+			ctor: '::',
+			_0: _debois$elm_mdl$Material_Button$ripple,
+			_1: {
+				ctor: '::',
+				_0: _debois$elm_mdl$Material_Button$colored,
+				_1: {
+					ctor: '::',
+					_0: _debois$elm_mdl$Material_Button$raised,
+					_1: {
+						ctor: '::',
+						_0: _debois$elm_mdl$Material_Options$onClick(_user$project$Msgs$SignIn),
+						_1: {ctor: '[]'}
+					}
+				}
+			}
+		},
+		{
+			ctor: '::',
+			_0: _elm_lang$html$Html$text('Sign in'),
+			_1: {ctor: '[]'}
+		});
+};
+var _user$project$View_SignIn$passwordForm = function (model) {
+	return A5(
+		_debois$elm_mdl$Material_Textfield$render,
+		_user$project$Msgs$Mdl,
+		{
+			ctor: '::',
+			_0: 2,
+			_1: {ctor: '[]'}
+		},
+		model.mdl,
+		{
+			ctor: '::',
+			_0: _debois$elm_mdl$Material_Textfield$label('Enter password'),
+			_1: {
+				ctor: '::',
+				_0: _debois$elm_mdl$Material_Textfield$floatingLabel,
+				_1: {
+					ctor: '::',
+					_0: _debois$elm_mdl$Material_Textfield$password,
+					_1: {
+						ctor: '::',
+						_0: _debois$elm_mdl$Material_Options$onInput(
+							_user$project$Msgs$UpdateSignInForm(_user$project$Types$Fpass)),
+						_1: {ctor: '[]'}
+					}
+				}
+			}
+		},
+		{ctor: '[]'});
+};
+var _user$project$View_SignIn$emailForm = function (model) {
+	return A5(
+		_debois$elm_mdl$Material_Textfield$render,
+		_user$project$Msgs$Mdl,
+		{
+			ctor: '::',
+			_0: 1,
+			_1: {ctor: '[]'}
+		},
+		model.mdl,
+		{
+			ctor: '::',
+			_0: _debois$elm_mdl$Material_Textfield$label('Enter email'),
+			_1: {
+				ctor: '::',
+				_0: _debois$elm_mdl$Material_Textfield$floatingLabel,
+				_1: {
+					ctor: '::',
+					_0: _debois$elm_mdl$Material_Textfield$email,
+					_1: {
+						ctor: '::',
+						_0: _debois$elm_mdl$Material_Options$onInput(
+							_user$project$Msgs$UpdateSignInForm(_user$project$Types$Femail)),
+						_1: {ctor: '[]'}
+					}
+				}
+			}
+		},
+		{ctor: '[]'});
+};
+var _user$project$View_SignIn$signInForm = function (model) {
+	return A2(
+		_elm_lang$html$Html$div,
+		{
+			ctor: '::',
+			_0: _elm_lang$html$Html_Attributes$class('center'),
+			_1: {ctor: '[]'}
+		},
+		{
+			ctor: '::',
+			_0: A2(
+				_elm_lang$html$Html$h4,
+				{ctor: '[]'},
+				{
+					ctor: '::',
+					_0: _elm_lang$html$Html$text('Sign in'),
+					_1: {ctor: '[]'}
+				}),
+			_1: {
+				ctor: '::',
+				_0: A2(
+					_elm_lang$html$Html$p,
+					{ctor: '[]'},
+					{
+						ctor: '::',
+						_0: _user$project$View_SignIn$emailForm(model),
+						_1: {ctor: '[]'}
+					}),
+				_1: {
+					ctor: '::',
+					_0: A2(
+						_elm_lang$html$Html$p,
+						{ctor: '[]'},
+						{
+							ctor: '::',
+							_0: _user$project$View_SignIn$passwordForm(model),
+							_1: {ctor: '[]'}
+						}),
+					_1: {
+						ctor: '::',
+						_0: A2(
+							_elm_lang$html$Html$p,
+							{ctor: '[]'},
+							{
+								ctor: '::',
+								_0: _user$project$View_SignIn$signInButton(model),
+								_1: {ctor: '[]'}
+							}),
+						_1: {ctor: '[]'}
+					}
+				}
+			}
+		});
+};

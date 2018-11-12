@@ -1,0 +1,10 @@
+var _user$project$Models_Timeline$post1 = {id: 'sadfhds235436sdfas', user_id: 0, username: 'Chappy', location: _user$project$Models_Geolocation$sampleGeo1, address: '札幌駅', content: _user$project$Models_PostContent$samplePost1};
+var _user$project$Models_Timeline$sampleTimeline = {
+	ctor: '::',
+	_0: _user$project$Models_Timeline$post1,
+	_1: {ctor: '[]'}
+};
+var _user$project$Models_Timeline$Post = F6(
+	function (a, b, c, d, e, f) {
+		return {id: a, user_id: b, username: c, location: d, address: e, content: f};
+	});

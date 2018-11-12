@@ -1,0 +1,56 @@
+var _user$project$Update$update = F2(
+	function (msg, model) {
+		var _p0 = msg;
+		switch (_p0.ctor) {
+			case 'UpdateSignInForm':
+				var _p3 = _p0._1;
+				var user = model.user;
+				var updatedUser = function () {
+					var _p1 = _p0._0;
+					if (_p1.ctor === 'Femail') {
+						return _elm_lang$core$Native_Utils.update(
+							user,
+							{email: _p3});
+					} else {
+						return _elm_lang$core$Native_Utils.update(
+							user,
+							{password: _p3});
+					}
+				}();
+				var _p2 = A2(_elm_lang$core$Debug$log, 'Msgs.UpdateSignInForm:', updatedUser);
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{user: updatedUser}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			case 'SignIn':
+				return {
+					ctor: '_Tuple2',
+					_0: model,
+					_1: _user$project$Commands$submitCredentialsCmd(model)
+				};
+			case 'SignInResult':
+				var _p4 = _p0._0;
+				if (_p4.ctor === 'Ok') {
+					var _p6 = _p4._0;
+					var _p5 = A2(_elm_lang$core$Debug$log, 'Success SignInResult:', _p6);
+					return {
+						ctor: '_Tuple2',
+						_0: _elm_lang$core$Native_Utils.update(
+							model,
+							{
+								token: _elm_lang$core$Maybe$Just(_p6)
+							}),
+						_1: _elm_lang$core$Platform_Cmd$none
+					};
+				} else {
+					var _p7 = A2(_elm_lang$core$Debug$log, 'Failed SignInResult:', _p4._0);
+					return {ctor: '_Tuple2', _0: model, _1: _elm_lang$core$Platform_Cmd$none};
+				}
+			default:
+				var _p8 = A2(_elm_lang$core$Debug$log, 'Otherwise case:', 'some msgs may not be defined yet.');
+				return {ctor: '_Tuple2', _0: model, _1: _elm_lang$core$Platform_Cmd$none};
+		}
+	});

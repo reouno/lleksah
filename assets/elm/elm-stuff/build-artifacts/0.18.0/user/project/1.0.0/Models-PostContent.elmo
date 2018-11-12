@@ -1,0 +1,4 @@
+var _user$project$Models_PostContent$PostContent = function (a) {
+	return {text: a};
+};
+var _user$project$Models_PostContent$samplePost1 = _user$project$Models_PostContent$PostContent('札幌駅にいます！');

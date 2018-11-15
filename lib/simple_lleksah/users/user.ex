@@ -6,6 +6,8 @@ defmodule SimpleLleksah.Users.User do
   alias SimpleLleksah.Users.User
 
 
+  @primary_key {:id, Ecto.UUID, autogenerate: true}
+  @derive {Phoenix.Param, key: :id}
   schema "users" do
     field :email, :string
     field :is_premium, :boolean, default: false

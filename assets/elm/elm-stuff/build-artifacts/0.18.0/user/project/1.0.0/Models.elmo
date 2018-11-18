@@ -1,5 +1,0 @@
-var _user$project$Models$initialModel = {mdl: _debois$elm_mdl$Material$model, user: _user$project$Models_User$emptyUser, token: _user$project$Models_Token$emptyToken, timeline: _user$project$Models_Timeline$sampleTimeline};
-var _user$project$Models$Model = F4(
-	function (a, b, c, d) {
-		return {mdl: a, user: b, token: c, timeline: d};
-	});

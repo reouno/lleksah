@@ -1,5 +1,0 @@
-var _user$project$Route$apiRoot = '/api/v1';
-var _user$project$Route$authUrl = A2(
-	_elm_lang$core$Basics_ops['++'],
-	_user$project$Route$apiRoot,
-	A2(_elm_lang$core$Basics_ops['++'], '/', 'sign_in'));

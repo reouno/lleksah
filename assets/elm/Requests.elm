@@ -3,7 +3,7 @@ module Requests exposing (..)
 import Http
 import Json exposing (credentialEncoder, tokenStringDecoder)
 import Models.User exposing (User)
-import Route exposing (authUrl)
+import Routing exposing (authUrl)
 
 submitCredentialsRequest : User -> Http.Request String
 submitCredentialsRequest user =

@@ -1,9 +1,0 @@
-var _user$project$Commands$submitCredentialsCmd = function (model) {
-	return A2(
-		_elm_lang$http$Http$send,
-		_user$project$Msgs$SignInResult,
-		_user$project$Requests$submitCredentialsRequest(model.user));
-};
-var _user$project$Commands$noCmd = function (model) {
-	return _elm_lang$core$Platform_Cmd$none;
-};

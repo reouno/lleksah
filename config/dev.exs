@@ -53,6 +53,6 @@ config :simple_lleksah, SimpleLleksah.Repo,
   adapter: Ecto.Adapters.Postgres,
   username: "postgres",
   password: "postgres",
-  database: "simple_lleksah_dev",
+  database: "simple_lleksah_dev_uuid",
   hostname: "localhost",
   pool_size: 10

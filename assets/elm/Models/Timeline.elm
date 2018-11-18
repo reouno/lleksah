@@ -16,6 +16,16 @@ type alias Post =
 
 type alias Timeline = List Post
 
+emptyPost : Post
+emptyPost =
+    { id = "newEmptyPostIdshouldbeUUID."
+    , user_id = 0
+    , username = ""
+    , location = Models.Geolocation.defaultGeolocation
+    , address = ""
+    , content = Models.PostContent.defaultPostContent
+    }
+
 post1 : Post
 post1 =
     { id = "sadfhds235436sdfas"

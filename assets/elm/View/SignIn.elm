@@ -25,6 +25,7 @@ emailForm model =
         , Textfield.floatingLabel
         , Textfield.email
         , Options.onInput (Msgs.UpdateSignInForm Types.Femail)
+        , Options.id "signin-email-field"
         ]
         []
 
